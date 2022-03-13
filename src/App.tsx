@@ -23,7 +23,7 @@ function Rig({ children }:any) {
   const outer = useRef<any>()
   const inner = useRef<any>()
   useFrame(({ clock }) => {
-    inner.current.rotation.y = Math.sin(clock.getElapsedTime() / 8) * Math.PI * 8
+    inner.current.rotation.y = clock.getElapsedTime()
   })
   return (
     <group position={[0, -100, 0]} ref={outer}>
