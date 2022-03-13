@@ -1,0 +1,21 @@
+newmtl Cylinder material 1_0f1a1176-b807-4c68-81e9-0c70b2bc605e
+Kd 0.290 0.882 1.000
+d 1.000
+newmtl Tube material_be2f431d-8971-4807-b90d-f135eaf50fdb
+Kd 0.106 0.231 0.420
+d 1.000
+newmtl Box material_b9b0e8a7-7f3a-485e-ace6-1973a3d26c25
+Kd 1.000 0.098 0.239
+d 1.000
+newmtl Buffer Layer material 1_a0d9ab46-00c8-4271-9819-b1046a4331f4
+Kd 1.000 0.098 0.239
+d 1.000
+newmtl Buffer Layer material 2_f828d099-b14c-4d9d-bfd4-77c32e395094
+Kd 0.106 0.231 0.420
+d 1.000
+newmtl Cylinder material_e8fd07c5-fcb7-49a3-a5a2-ae149a78a1b8
+Kd 0.882 0.945 0.980
+d 1.000
+newmtl Buffer Layer material_dda3d5db-77f3-4488-b1ac-07bb3266da01
+Kd 0.992 0.776 0.000
+d 1.000
