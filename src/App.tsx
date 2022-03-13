@@ -40,6 +40,8 @@ function App() {
           <Stage
             contactShadow={false}
             intensity={0.3}
+            rotation={[0, 0, getRadian(45)]}
+            position={[0,70,0]}
           >
             <Rig>
               <Model />
