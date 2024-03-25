@@ -1,6 +1,7 @@
 import { isShowingOverlayAtom } from "@/atoms/isShowingOverlay.atom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 
 export function LoadingOverlay({
@@ -12,13 +13,17 @@ export function LoadingOverlay({
   time: number;
   manual?: boolean;
 }) {
+  const [searchParams] = useSearchParams();
   const alreadyLoading =
-    !manual && sessionStorage.getItem("alreadyLoading") === "true";
+    !manual &&
+    (sessionStorage.getItem("alreadyLoading") === "true" ||
+      searchParams.has("skipLoading"));
   const [isShow, setIsShow] = useState(false);
   const setIsShowingOverlay = useSetRecoilState(isShowingOverlayAtom);
 
   useEffect(() => {
     if (alreadyLoading) {
+      sessionStorage.setItem("alreadyLoading", "true");
       setIsShow(false);
       setIsShowingOverlay(false);
       return;
