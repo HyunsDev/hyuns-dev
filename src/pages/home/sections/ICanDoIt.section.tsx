@@ -65,12 +65,12 @@ export function AboutICanDoItSection() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 1 }}
+          transition={{ duration: 0.4 }}
           viewport={{ once: true }}
           className="min-h-[1000px]"
         >
           {texts.map((text, index) => (
-            <TextRow text={text} delay={1 + index * 0.08} key={index} />
+            <TextRow text={text} delay={0.5 + index * 0.08} key={index} />
           ))}
         </motion.div>
       </div>
